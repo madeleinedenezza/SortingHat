@@ -6,8 +6,10 @@ public class SortingHatRunner extends JFrame
 	{
 	private static final long serialVersionUID = 1L;
 	static JFrame frame = new JFrame();
+	static JFrame frame1 = new JFrame();
 	static int learnMore;
 	static String sortingHat;
+	static String firstPeriod;
 	
 	static String name; 
 	
@@ -92,6 +94,29 @@ public class SortingHatRunner extends JFrame
 				break;
 				}
 			}
+		
+		JOptionPane.showMessageDialog(frame, "Time to start your classes! You'll have 5 classes to go to today.");
+		
+		String[] periodOne = {"Transfiguratons", "Charms"};
+		JFrame frame1 = new JFrame();
+		String firstPeriod = (String) JOptionPane.showInputDialog(frame1, "Which class would you like to take during first period?",
+				"First Period",
+				JOptionPane.QUESTION_MESSAGE,
+				null
+				periodOne,
+				periodOne[0]);
+		break;
+		
+		switch(firstPeriod)
+			{
+			case "Transfiguartions":
+				{
+				ImageIcon icon1 = new ImageIcon(("transfigurations.jpg"));
+				JOptionPane.showMessageDialog(frame, "Great choice! Transfiguartions is a great class! Your professor, Professor McGonagall, is a great teacher!",
+						"Transfigurations", 0, icon1);
+				}
+			}
+		
 
 		}
 
