@@ -10,12 +10,21 @@ public class SortingHatRunner extends JFrame
 	static JFrame frame2 = new JFrame();
 	static JFrame frame3 = new JFrame();	
 	static JFrame frame4 = new JFrame();
+	static JFrame frame5 = new JFrame();
+	static JFrame frame6 = new JFrame();
+	static JFrame frame7 = new JFrame();
+	static JFrame frame8 = new JFrame();
 	static int learnMore;
 	static String sortingHat;
 	static String firstPeriod;
 	static String secondPeriod;
 	static String thirdPeriod;
 	static String fourthPeriod;
+	static String fifthPeriod;
+	static String yourPet;
+	static String pickOwl;
+	static String pickCat;
+	static String pickToad;
 	static String name; 
 	
 	public static void main(String[] args)
@@ -215,6 +224,96 @@ public class SortingHatRunner extends JFrame
 				JOptionPane.showMessageDialog(frame, "Flying with Professor Hooch is a great class, especially if you plan on joining the Quidditch team!",
 						"Flying", 0, icon1);
 				break;
+				}
+			}
+		
+		JOptionPane.showMessageDialog(frame, "Time for your last period of the day, fifth period!");
+		
+		String[] periodFive = {"Care of Magical Creatures", "Divination"};
+		JFrame frame5 = new JFrame();
+		String fifthPeriod = (String) JOptionPane.showInputDialog(frame5, "Which class would you like to take during fifth period?",
+				"Fifth Period",
+				JOptionPane.QUESTION_MESSAGE,
+				null,
+				periodFive,
+				periodFive[0]);
+		
+		switch (fifthPeriod)
+			{
+			case "Care of Magical Creatures":
+				{
+				ImageIcon icon1 = new ImageIcon(("cOMC.jpg"));
+				JOptionPane.showMessageDialog(frame, "Great choice! Professor Hagrid is one of our wisest and most fun teachers here at Hogwarts",
+						"Care of Magical Creatures", 0, icon1);
+				break;
+				}
+			case "Divination":
+				{
+				ImageIcon icon1 = new ImageIcon(("divination.jpg"));
+				JOptionPane.showMessageDialog(frame, "Wonderful choice! Divination with Professor Trelawney is a very interesting class!",
+						"Divination", 0, icon1);
+				}
+			}
+		
+		JOptionPane.showMessageDialog(frame, "Now that your classes are over, you can head back to your dorm room.");
+		JOptionPane.showMessageDialog(frame, "Get settled in... Soon you'll have to head down to the Great Hall for dinner.");
+		JOptionPane.showMessageDialog(frame, "You get a knock at the door... you open it and you see an animal... possibly your new pet!");
+		
+		String[] pickYourPet = {"Owl", "Cat", "Toad", "Rat"};
+		String yourPet = (String) JOptionPane.showInputDialog(frame, "Which type of pet would you like?",
+				"Pick Your Pet",
+				JOptionPane.QUESTION_MESSAGE,
+				null,
+				pickYourPet,
+				pickYourPet[0]);
+		
+		switch (yourPet)
+			{
+			case "Owl":
+				{
+				ImageIcon icon1 = new ImageIcon(("owl.jpg"));
+				JFrame frame6 = new JFrame();
+				String[] pickYourOwl = {"Snowy Owl", "Great Grey Owl", "Eastern Screech Owl", "Scops Owl", "Eurasian Eagle Owl", "Barn Owl"};
+				String pickOwl = (String) JOptionPane.showInputDialog(frame6, "Great choice! Having a wise owl by your side can be very useful."
+						+ "\nWhat type of owl would you like?",
+						"Pick Your Owl",
+						JOptionPane.QUESTION_MESSAGE,
+						icon1,
+						pickYourOwl,
+						pickYourOwl[0]);
+				}
+			case "Cat":
+				{
+				ImageIcon icon1 = new ImageIcon(("cat.jpg"));
+				JFrame frame7 = new JFrame();
+				String [] pickYourCat = {"Black Cat", "Calico Cat", "Tabby Cat", "Ginger Cat", "White Cat", "Black and White Cat"};
+				String pickCat = (String) JOptionPane.showInputDialog(frame7, "Classic choice! Cats are very commonly associated with wizards and witches!"
+						+ "\nThey are quite clever creatures!"
+						+ "\nWhat type of cat would you like?",
+						"Pick Your Cat",
+						JOptionPane.QUESTION_MESSAGE,
+						icon1,
+						pickYourCat,
+						pickYourCat[0]);
+				}
+			case "Toad":
+				{
+				ImageIcon icon1 = new ImageIcon(("toad.jpg"));
+				JFrame frame8 = new JFrame();
+				String[] pickYourToad = {"Briar Toad", "Common Toad", "Dragon Toad", "Giant Purple Toad", "Horned Toad"};
+				String pickToad = (String) JOptionPane.showInputDialog(frame8, "Interesting choice! What type of toad would you like?",
+						"Pick Your Toad",
+						JOptionPane.QUESTION_MESSAGE,
+						icon1,
+						pickYourToad,
+						pickYourToad[0]);
+				}
+			case "Rat":
+				{
+				ImageIcon icon1 = new ImageIcon(("rat.jpg"));
+				JFrame frame9 = new JFrame();
+				String[] pickYourRat = {"Brown/Norway Rat", "Black Rat", "Bush Rat", "Long-haired Rat"};
+				
 				}
 			}
 		}
