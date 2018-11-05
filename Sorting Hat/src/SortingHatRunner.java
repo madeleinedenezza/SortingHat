@@ -14,6 +14,8 @@ public class SortingHatRunner extends JFrame
 	static JFrame frame6 = new JFrame();
 	static JFrame frame7 = new JFrame();
 	static JFrame frame8 = new JFrame();
+	static JFrame frame9 = new JFrame();
+	static JFrame frame10 = new JFrame();
 	static int learnMore;
 	static String sortingHat;
 	static String firstPeriod;
@@ -25,7 +27,9 @@ public class SortingHatRunner extends JFrame
 	static String pickOwl;
 	static String pickCat;
 	static String pickToad;
-	static String name; 
+	static String pickRat;
+	static String newFriend;
+	static String name;
 	
 	public static void main(String[] args)
 		{
@@ -281,6 +285,7 @@ public class SortingHatRunner extends JFrame
 						icon1,
 						pickYourOwl,
 						pickYourOwl[0]);
+				break;
 				}
 			case "Cat":
 				{
@@ -295,6 +300,7 @@ public class SortingHatRunner extends JFrame
 						icon1,
 						pickYourCat,
 						pickYourCat[0]);
+				break;
 				}
 			case "Toad":
 				{
@@ -307,14 +313,93 @@ public class SortingHatRunner extends JFrame
 						icon1,
 						pickYourToad,
 						pickYourToad[0]);
+				break;
 				}
 			case "Rat":
 				{
 				ImageIcon icon1 = new ImageIcon(("rat.jpg"));
 				JFrame frame9 = new JFrame();
 				String[] pickYourRat = {"Brown/Norway Rat", "Black Rat", "Bush Rat", "Long-haired Rat"};
-				
+				String pickRat = (String) JOptionPane.showInputDialog(frame9, "Nice choice. What type of toad would you like?",
+						"Pick Your Rat",
+						JOptionPane.QUESTION_MESSAGE,
+						icon1,
+						pickYourRat,
+						pickYourRat[0]);
+				break;
 				}
 			}
+		JOptionPane.showMessageDialog(frame, "Now that you've picked your pet, it's time to head down to the Great Hall for dinner.");
+		
+		JOptionPane.showMessageDialog(frame, "You arrive at the Great Hall, but you don't know where to sit..."
+				+ "\nYou see someone call you over, though you don't know who they are or how they know you, you head over to them.");
+		
+		ImageIcon icon1 = new ImageIcon(("friends.jpg"));
+		JFrame frame10 = new JFrame();
+		String[] friends = {"Harry Potter", "Ron Weasley", "Hermione Granger", "Draco Malfoy", "Neville Longbottom", "Luna Lovegood"};
+		String newFriend = (String) JOptionPane.showInputDialog(frame10, "Pick your new friend...",
+				"New Friend",
+				JOptionPane.QUESTION_MESSAGE,
+				icon1,
+				friends,
+				friends[0]);
+		
+		switch (newFriend)
+			{
+			case "Harry Potter":
+				{
+				ImageIcon icon2 = new ImageIcon(("harry.jpg"));
+				JFrame frame11 = new JFrame();
+				JOptionPane.showMessageDialog(frame11, "Harry Potter... what a wonderful choice! "
+						+ "\nHarry is a loyal friend and will always stand up for what is right.", 
+						"Harry Potter", 0, icon2);
+				break;
+				}
+			case "Ron Weasley":
+				{
+				ImageIcon icon2 = new ImageIcon(("ron.jpg"));
+				JFrame frame12 = new JFrame();
+				JOptionPane.showMessageDialog(frame12, "Ron Weasley, such a silly fellow he is. "
+						+ "\nRon is a great friend and will do anything for the people he loves... good choice!",
+						"Ron Weasley", 0, icon2);
+				break;
+				}
+			case "Hermione Granger":
+				{
+				ImageIcon icon2 = new ImageIcon(("hermione.jpg"));
+				JFrame frame13 = new JFrame();
+				JOptionPane.showMessageDialog(frame13, "Hermione Granger... truly one of the most hardworking and determined students Hogwarts has ever seen."
+						+ "\nShe will be a great friend!",
+						"Hermione Granger", 0, icon2);
+				break;
+				}
+			case "Draco Malfoy":
+				{
+				ImageIcon icon2 = new ImageIcon(("draco.jpg"));
+				JFrame frame14 = new JFrame();
+				JOptionPane.showMessageDialog(frame14, "Draco Malfoy... very interesting choice."
+						+ "\nDraco is a very cunning kid, but he is not the nicest friend. Be warned... be careful with him.",
+						"Draco Malfoy", 0, icon2);
+				break;
+				}
+			case "Neville Longbottom":
+				{
+				ImageIcon icon2 = new ImageIcon(("neville.jpg"));
+				JFrame frame15 = new JFrame();
+				JOptionPane.showMessageDialog(frame15, "Neville Longbottom is a very good kid."
+						+ "\nHe is a little shy, but if you get to know him you will love him.",
+						"Neville Longbottom", 0, icon2);
+				break;
+				}
+			case "Luna Lovegood":
+				{
+				ImageIcon icon2 = new ImageIcon(("luna.jpg"));
+				JFrame frame16 = new JFrame();
+				JOptionPane.showMessageDialog(frame16, "Luna Lovegood is a wonderful choice!!"
+						+ "\nLuna is a weird girl, but she is very smart and caring for others. She will always have your back.",
+						"Luna Lovegood", 0, icon2);
+				break;
+				}
+			}	
 		}
 	}
